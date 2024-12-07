@@ -7,7 +7,7 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    background-color: #000;
+    background-color: black;
     color: #fff;
     line-height: 1.6;
 }
@@ -127,7 +127,11 @@ nav {
     margin: 0 auto;
     text-align: center;
 }
-
+.moto-content{
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 68px;
+}
 .about h2 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
@@ -154,11 +158,180 @@ footer {
         grid-template-columns: 1fr;
     }
 }
-.feature_image{
+.image1{
+    display: flex;
+    justify-content: space-between;
+    height: 1100px;
+    width: 900px;
+}
+.feature_image2{
+    align-items: bottom;
+    padding-top: 500px;
+}
+.first_green img{
+    margin-right: 50px;
+    border-radius: 56px;
+    height: 672px;
+    width: 1320px;
+    margin-left: 60px;
+}
+
+body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 2rem;
+}
+
+.portfolio-grid {
     display: grid;
-    display: inline;
-    justify-content: right;
-    align-items: center;
-    height: 900px;
-    width: 816px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.project-card {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #2d2d2d;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.05);
+}
+
+.project-info {
+    padding: 1.5rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-info {
+    transform: translateY(0);
+}
+
+.project-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.project-info p {
+    font-size: 1rem;
+    color: #cccccc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+    }
+    
+    .project-card img {
+        height: 200px;
+    }
+    
+    .project-info {
+        padding: 1rem;
+    }
+    
+    .project-info h3 {
+        font-size: 1.2rem;
+    }
+    
+    .project-info p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Animation Classes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.project-card {
+    animation: fadeIn 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+.project-card:nth-child(1) { animation-delay: 0.1s; }
+.project-card:nth-child(2) { animation-delay: 0.2s; }
+.project-card:nth-child(3) { animation-delay: 0.3s; }
+.project-card:nth-child(4) { animation-delay: 0.4s; }
+.project-card:nth-child(5) { animation-delay: 0.5s; }
+.project-card:nth-child(6) { animation-delay: 0.6s; }
+.project-card:nth-child(7) { animation-delay: 0.7s; }
+.project-card:nth-child(8) { animation-delay: 0.8s; }
+.project-card:nth-child(9) { animation-delay: 0.9s; }
+
+
+.girl-image{
+    width: 1340px;
+    height: 810px;
+    border: 1.5px;
+    margin-left: 125px;
+}
+
+.intro-section {
+    padding: 5% 10%;
+    text-align: center;
+    background-color: #000000;
+}
+
+.intro-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Gallery */
+.gallery {
+    padding: 5%;
+    background-color: #000000;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    aspect-ratio: 1;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
 }
