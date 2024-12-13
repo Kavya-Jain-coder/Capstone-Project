@@ -1,4 +1,3 @@
-/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -6,18 +5,22 @@
 }
 
 body {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     background-color: black;
     color: #fff;
     line-height: 1.6;
+    height: 100vh;
 }
 
 /* Navigation */
 header {
     position: fixed;
-    width: 100%;
+    width: 95.7%;
     top: 0;
-    z-index: 1000;
     background-color: rgba(0, 0, 0, 0.9);
     padding: 1rem 2rem;
 }
@@ -35,7 +38,8 @@ nav {
     font-weight: bold;
     letter-spacing: 2px;
 }
-.logo:hover{
+
+.logo:hover {
     color: #00cc00;
 }
 
@@ -58,6 +62,7 @@ nav {
 
 /* Hero Section */
 .hero {
+   
     height: 100vh;
     display: flex;
     align-items: center;
@@ -65,6 +70,7 @@ nav {
     text-align: center;
     padding: 2rem;
     background: linear-gradient(45deg, #000, #111);
+   
 }
 
 .hero-content {
@@ -74,9 +80,7 @@ nav {
 .hero h1 {
     font-size: 4rem;
     margin-bottom: 1rem;
-    background: linear-gradient(45deg, #cce5cc, #00cc00);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #00ff00;
 }
 
 /* Portfolio Grid */
@@ -127,11 +131,13 @@ nav {
     margin: 0 auto;
     text-align: center;
 }
-.moto-content{
+
+.moto-content {
     font-weight: 500;
     font-size: 64px;
     line-height: 68px;
 }
+
 .about h2 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
@@ -158,22 +164,26 @@ footer {
         grid-template-columns: 1fr;
     }
 }
-.image1{
+
+.image1 {
     display: flex;
     justify-content: space-between;
     height: 1100px;
     width: 900px;
 }
-.feature_image2{
+
+.feature_image2 {
     align-items: bottom;
     padding-top: 500px;
 }
-.first_green img{
+
+.first_green img {
     margin-right: 50px;
     border-radius: 56px;
     height: 672px;
     width: 1320px;
     margin-left: 60px;
+    overflow: auto;
 }
 
 body {
@@ -246,24 +256,24 @@ body {
     body {
         padding: 1rem;
     }
-    
+
     .portfolio-grid {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 1rem;
     }
-    
+
     .project-card img {
         height: 200px;
     }
-    
+
     .project-info {
         padding: 1rem;
     }
-    
+
     .project-info h3 {
         font-size: 1.2rem;
     }
-    
+
     .project-info p {
         font-size: 0.9rem;
     }
@@ -275,6 +285,7 @@ body {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -286,28 +297,54 @@ body {
     opacity: 0;
 }
 
-.project-card:nth-child(1) { animation-delay: 0.1s; }
-.project-card:nth-child(2) { animation-delay: 0.2s; }
-.project-card:nth-child(3) { animation-delay: 0.3s; }
-.project-card:nth-child(4) { animation-delay: 0.4s; }
-.project-card:nth-child(5) { animation-delay: 0.5s; }
-.project-card:nth-child(6) { animation-delay: 0.6s; }
-.project-card:nth-child(7) { animation-delay: 0.7s; }
-.project-card:nth-child(8) { animation-delay: 0.8s; }
-.project-card:nth-child(9) { animation-delay: 0.9s; }
+.project-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.project-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.project-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.project-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.project-card:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.project-card:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.project-card:nth-child(7) {
+    animation-delay: 0.7s;
+}
+
+.project-card:nth-child(8) {
+    animation-delay: 0.8s;
+}
+
+.project-card:nth-child(9) {
+    animation-delay: 0.9s;
+}
 
 
-.girl-image{
-    width: 1340px;
-    height: 810px;
+.girl-image {
+    width: auto;
+    height: auto;
     border: 1.5px;
     margin-left: 125px;
 }
 
 .intro-section {
-    padding: 5% 10%;
     text-align: center;
     background-color: #000000;
+    padding-left: 15px;
 }
 
 .intro-section h2 {
@@ -316,22 +353,28 @@ body {
 }
 
 /* Gallery */
-.gallery {
-    padding: 5%;
-    background-color: #000000;
+.gallery-grid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+.geometric-1 img{
+    height: 40px;
+    width: 40px;
 }
-
-.gallery-item {
-    aspect-ratio: 1;
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
+.geometric-2 img{
+    height: 40px;
+    width: 40px;
+}
+.geometric-3 img{
+    height: 40px;
+    width: 40px;
+}
+.geometric-4 img{
+    height: 40px;
+    width: 40px;
+}
+.geometric-5 img{
+    height: 40px;
+    width: 40px;
 }
